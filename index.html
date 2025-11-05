@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home page</title>
+   
+
+
+  <style>
+  
+    body {
+      background-image: url("background.jpg"); /* keep your image in project folder */
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      margin: 0;
+      font-family: Verdana, sans-serif;
+      color: rgb(234, 224, 224);
+
+      /* Center heading middle of screen */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;  /* vertical center */
+      align-items: center;      /* horizontal center */
+      min-height: 100vh;        /* full screen height */
+      text-align: center;
+    }
+    
+
+    h1 {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 15px 25px;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    h2 {
+      margin-top: 50px;
+      background-color: rgba(0, 0, 0, 0.6);
+      display: inline-block;
+      padding: 15px 25px;
+      border-radius: 10px;
+      text-align: center;
+    }
+  
+
+    /* Paragraph style */
+      p {
+      font-size: 18px;
+      font-family:Verdana, sans-serif;
+      font-weight: 550; 
+      line-height: 1.8;
+      text-align: justify;
+      padding: 7px;
+      border-radius: 10px;
+      max-width: 1600px;
+      margin: 10px auto;
+      text-align: center;
+      color: rgb(26, 1, 1);
+      }
+
+   .para2 {
+  font-size: 15px;
+  background-color: rgba(135, 113, 113, 0);
+  font-family: Verdana, sans-serif;
+  font-weight: 550;
+  line-height: 1.8;
+  padding: 5x;
+  border-radius: 10px;
+  max-width: 1600px;
+  margin: 10px auto;
+  text-align: center;
+  color: rgb(58, 55, 46);
+  
+  white-space: nowrap;   /* 👈 இதுதான் text wrap ஆகாமல் single lineல வைக்குறது */
+  overflow: hidden;      /* text பெரியது என்றால் box-க்கு வெளியே போகாம */
+  text-overflow: ellipsis; 
+}
+.para3 {
+  font-size: 10px;
+  font-family: Verdana, sans-serif;
+  font-weight: 450;
+  line-height: 1.8;
+  padding: 0px;
+  border-radius: 10px;
+  max-width: 600px;
+  margin: 0 auto 200px auto;   /* bottom 40px gap */
+  text-align: center;
+  color: rgb(16, 16, 16);
+}
+.layout {
+  display: flex;             /* side by side */
+  align-items: flex-start;   /* top align */
+  gap: 30px;                 /* gap between text and image */
+  max-width: 1000px;
+  margin: 0 auto;            /* center layout in page */
+}
+.text-block {
+  flex: 1;}
+
+.text-block {
+  max-width: 600px;
+}
+.image1 {
+  flex: 1;                  /* take remaining space */
+  display: flex;
+  justify-content: flex-end;  /* push image to right */
+  align-items: flex-start; 
+   margin-right:-650px;        /* extra right space in px */
+  margin-top: -270px;         /* move image up in px */
+
+}
+
+.image1 img {
+  max-width: 650px;           /* scale image inside container */
+  height: auto;
+  border-radius: 10px;
+}
+.image2 {
+  flex: 1;                  /* take remaining space */
+  display: flex;
+  justify-content: flex-end;  /* push image to right */
+  align-items: flex-start; 
+   margin-left:-30px;        /* extra right space in px */
+  margin-top: 0px;         /* move image up in px */
+
+}
+
+.image2 img {
+  max-width: 650px;           /* scale image inside container */
+  height: auto;
+  border-radius: 10px;
+ 
+}
+.image3 {
+  flex: 1;                  /* take remaining space */
+  display: flex;
+  justify-content: flex-end;  /* push image to right */
+  align-items: flex-start; 
+  margin-left:850px;        /* extra right space in px */
+  margin-top: 250px;    /* move image up in px */
+  gap: 20px;
+       
+
+}
+
+.image3 img {
+  max-width: 650px;           /* scale image inside container */
+  height: auto;
+border-radius: 5px;
+}
+.image4 {
+  flex: 1;                  /* take remaining space */
+  display: flex;
+  justify-content: flex-end;  /* push image to right */
+  align-items: flex-start; 
+  margin-left:850px;        /* extra right space in px */
+  margin-top: -170px;    /* move image up in px */
+  gap: 20px;
+       
+
+}
+
+.image4 img {
+  width:350px;
+  height:825px;
+  max-width: 650px;           /* scale image inside container */
+  height: auto;
+border-radius: 5px;}
+
+
+
+
+
+.para4 {
+  font-size: 15px;
+  font-family: Verdana, sans-serif;
+  font-weight: bold;  
+  line-height: 1.8;
+  padding: 0px;
+  border-radius: 10px;
+  max-width: 500px;
+  text-align: left;
+  color: rgb(16, 16, 16);
+  margin-left: -40px;     /* move paragraph 150px from left */
+ 
+}
+.para4 {
+  font-size: 13px;
+  font-family: Verdana, sans-serif;
+    font-weight: 250; 
+  line-height: 1.8;
+  padding: 0px;
+  border-radius: 10px;
+  max-width: 330px;           
+  text-align: left;          
+  color: black;
+  margin-top: 0px;
+  margin-left: -40px;    /* move paragraph to right */
+}
+
+.para4 .title {
+ font-size: 15px;
+  font-family:  'Roboto', sans-serif;
+  font-weight: 700; 
+  line-height: 1.8;
+  padding: 0px;
+  border-radius: 10px;
+  max-width: 300px;           
+  text-align: left;          
+  color: rgb(16, 16, 16);
+  margin-left: 0px     /* move paragraph 150px from left */
+}
+
+
+.para5 {
+  font-size: 15px;
+  font-family: Verdana, sans-serif;
+  font-weight: 400; 
+  line-height: 1.8;
+  padding: 0px;
+  border-radius: 10px;
+  max-width: 200px;           
+  text-align: left;          
+  color: black;
+  margin-top: 0px;
+  margin-left: 600px;    /* move paragraph to right */
+}
+
+.para5 .title {
+  display: block;
+  width: 550px;         /* fixed width instead of max-width */
+  font-size: 25px;
+  font-weight: bold;
+  color: black;
+  text-align: center;
+  margin-top: 0px;
+  position: relative;
+  left: -100px;
+}
+.para6 {
+  font-size: 10px;
+  font-family: Verdana, sans-serif;
+    font-weight: 300; 
+  line-height: 1.8;
+  padding: 0px;
+  border-radius: 10px;
+  max-width: 200px;           
+  text-align: left;          
+  color: black;
+  margin-top: 0px;
+  margin-left: 600px;    /* move paragraph to right */
+}
+
+.para6 .title {
+ font-size: 15px;
+  font-family:  'Roboto', sans-serif;
+  font-weight: 700; 
+  line-height: 1.4;
+  padding: 0px;
+  border-radius: 10px;
+  max-width: 300px;           
+  text-align: left;          
+  color: black;
+  margin-left: 0px     /* move paragraph 150px from left */
+}
+
+       /* adjust to center if needed */
+
+
+  /* Button styles */
+    .btn {
+      display: inline-block;
+      margin: 10px;
+      padding: 12px 24px;
+      font-size: 18px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      text-decoration: none;
+      color: white;
+      margin: 40px auto;
+      background: rgba(0, 0, 0, 0.4);
+      transition: background 0.3s ease;
+    }
+      
+    .btn-1 {
+     display: flex;           /* buttons side by side */
+     justify-content: center; /* center all buttons horizontally */
+     gap: 20px;               /* 20px space between each button */
+     margin-top: 20px;        /* optional, top spacing from above elements */
+     }
+    
+.btn-2 .btn {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 18px;
+    border-radius: 20px;
+    background: green;
+    color:white;
+    text-decoration: none;
+    position: relative;
+    top: -150px;    /* move button up */
+    left: -40px;   /* move button right */
+}
+.btn-3 .btn {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 18px;
+    border-radius: 20px;
+    background:green;
+    color:white;
+    text-decoration: none;
+    position: relative;
+    top: -20px;    /* move button up */
+    left: -60px; 
+  /* move button right */
+}
+.btn-4 .btn {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 18px;
+    border-radius: 20px;
+    background:green;
+    color:white;
+    text-decoration: none;
+    position: relative;
+    top: -20px;    /* move button up */
+    left: -60px; 
+  /* move button right */
+}
+  
+    .btn:hover {
+      background-color: rgba(255, 255, 255, 0.3);
+    }  
+    .layoutimage {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 images per row */
+  gap: 2px; /* space between images */
+  max-width: 1500px;
+  margin: 10px;
+}
+
+.layoutimage img {
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+  border-radius: 8px;
+}
+.thumb {
+  width: 200px;   /* small size for gallery */
+  height: 150px;
+  object-fit: cover; /* crop neatly */
+  cursor: pointer;
+  margin: 5px;
+}
+
+/* Modal design */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  padding-top: 60px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.9);
+}
+.modal-content {
+  display: block;
+  margin: auto;
+  max-width: 80%;
+  max-height: 80%;
+}
+.close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.highlight {
+  background-color: rgba(247, 247, 244, 0.929);  /* text highlight color */
+  font-weight: bold;         /* bold text */
+  color: rgb(122, 89, 241);                /* text color */
+}
+
+
+      
+
+
+  </style>
+  <script>
+    function openModal(img) {
+  const modal = document.getElementById("myModal");
+  const modalImg = document.getElementById("modalImg");
+  modal.style.display = "block";
+  modalImg.src = img.src;
+}
+
+function closeModal() {
+  document.getElementById("myModal").style.display = "none";
+}
+</script>
+
+</head>
+<body>
+      <h1>DESIGN YOUR HOME IN 3D</h1>
+
+
+
+  <img src="web.img" alt="My Image" height="700" width="1600">
+
+  <p calss="para1">
+    We recently had the opportunity to attend to a client who approached us with a 2D floor plan, 
+    seeking to transform their vision into a realistic 3D design. During our initial consultation, 
+    we carefully reviewed the provided drawings, discussed the client's preferences, and gathered 
+    important details regarding materials, colors, furniture layout, and spatial requirements.
+    Our goal was to bring their concept to life with clarity and precision. By using advanced 3D 
+    modeling software, we created a detailed, visually engaging 3D representation of the space. 
+    This not only helped the client better visualize the final outcome but also allowed them to 
+    explore design options and make informed decisions before the actual execution.
+    The process emphasized clear communication, collaborative decision-making, and a commitment 
+    to delivering high-quality, functional, and aesthetic 3D designs based on their original 2D plan. 
+    The client was highly satisfied with the transformation, gaining a realistic preview of their 
+    project that matched their expectations.
+  </p>
+  
+
+
+<!-- Buttons container -->
+<div class="btn-1">
+  <a href="first.html" class="btn">ABOUT</a>
+  <a href="second.html" class="btn">SERVICE</a>
+  <a href="first.html" class="btn">CONTACT US</a>
+  </div>
+
+    <div id="myModal" class="modal">
+  <span class="close" onclick="closeModal()">&times;</span>
+  <button class="prev" onclick="changeImage(-1)">&#10094;</button>
+  <img class="modal-content" id="modalImg">
+  <button class="next" onclick="changeImage(1)">&#10095;</button>
+</div>
+<div class="layoutimage">
+  <img src="C:/Users/Suthesh/Desktop/HTML website/image1.webp" alt="Image 1" onclick="openModal(this)">
+  <img src="C:/Users/Suthesh/Desktop/HTML website/image2.webp"alt="Image 2" onclick="openModal(this)">
+  <img src="C:/Users/Suthesh/Desktop/HTML website/image4.jpg" alt="Image 4" onclick="openModal(this)">
+  <img src="C:/Users/Suthesh/Desktop/HTML website/image5.jpeg" alt="Image 5" onclick="openModal(this)">
+  <img src="C:/Users/Suthesh/Desktop/HTML website/image3.webp" alt="Image 3" onclick="openModal(this)">
+  <img src="C:/Users/Suthesh/Desktop/HTML website/image6.jpg" alt="Image 6" onclick="openModal(this)">
+</div>
+ 
+ <p class="para2">
+                 Explore inspiring creation from the Homebyme community and find the perfect ideas to bring your home decor projects to life !
+</p>
+
+<p class="para3">
+   Get inspired<span class="highlight"> Kitchen decor ideas,living-roomdecor ideas,bathroom</span> and <span class="highlight">bedroom decor ideas</span> designed and shared by our creative community.
+
+</p>
+  
+
+
+
+<!-- Modal -->
+<div id="myModal" class="modal" onclick="closeModal()">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="modalImg">
+</div>
+<div class="layout">
+  <div class="text-block">
+
+    <p class="para4">
+  <span class="title">Design your House<br> 
+    Floor Plan in 3D</span> <br>
+  Intuitive and easy to use, our 3D Room Planner lets you create your home's 2D floor plan and visualize it in 3D.
+</p>
+     <div class="image1">
+    <img src="C:\Users\Suthesh\Desktop\HTML website\HT SS 2.png">
+     </div>
+  </div>
+  </div>
+<div class="btn-2">
+  <a href="first.html" class="btn">Create Free Design</a>
+</div>
+<p class="para5">
+  <span class="title">Furnish and decorate with our Home Design Software</span> <br>
+  Express your style with a catalog of branded products : furniture, rugs, wall and floor coverings...
+</p>
+<div class="btn-3">
+  <a href="first.html" class="btn">Get start</a>
+  </div>
+  <div class="image2">
+    <img src="C:\Users\Suthesh\Desktop\HTML website\HT SS 3.png">
+     </div>
+     <div class="image3">
+    <img src="C:\Users\Suthesh\Desktop\HTML website\HT SS5.png"width="350 "height="825"><img src="C:\Users\Suthesh\Desktop\HTML website\HT SS4.png" width="350" height="725">
+     </div>
+     <p class="para6">
+  <span class="title">Bring your Home Design Projects to life with 4K Images effortlessly.</span> <br>
+ Get an ultra-realistic view of your Interior Design project with stunning 4K images. Create beautiful 4K renderings to better visualize your ideas and make the best decisions for your space
+</p>
+<div class="image4">
+    <img src="C:\Users\Suthesh\Desktop\HTML website\HT SS6.png"width="350 "height="825"><img src="C:\Users\Suthesh\Desktop\HTML website\HT SS7.png" width="350" height="225">
+     </div>
+     <div class="btn-4">
+  <a href="first.html" class="btn">sign up for free</a>
+  </div>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+ 
+ 
